@@ -1,4 +1,7 @@
-from datetime import datetime, timedelta
+import time
+import timeit
+import datetime
+import calendar
 
 script_version = "1.0.2"
 last_mod_date = "10/12/2019"
@@ -9,8 +12,9 @@ expec_val = 1500
 
 print("script version is", script_version)
 #Fix me!
-today = date.today()
-today = date.fromisoformat('2019-12-04')
+t = time.localtime()
+today =t = time.localtime()
+today = datetime.date.fromisoformat('2019-12-04')
 
 print("Today is", today.strftime("%d/%m/%Y"))
 next_mounth = today.month + 1;
