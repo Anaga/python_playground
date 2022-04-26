@@ -2,8 +2,8 @@ import datetime
 from datetime import datetime as dt
 from datetime import timedelta
 
-script_version = "1.0.3"
-last_mod_date = "13/03/2020"
+script_version = "1.0.4"
+last_mod_date = "26/04/2022"
 pay_day = 5
 ipo_day = 10
 ipo_val = 533
