@@ -1,0 +1,85 @@
+INFO Reading configuration /config/esphome/hydro-controller.yaml...
+INFO Starting log output from hydro-controller.local using esphome API
+INFO Successfully connected to hydro-controller.local
+[10:26:16][I][app:102]: ESPHome version 2022.5.0 compiled on May 24 2022, 20:28:16
+[10:26:16][C][wifi:491]: WiFi:
+[10:26:16][C][wifi:353]:   Local MAC: 78:E3:6D:19:29:00
+[10:26:16][C][wifi:354]:   SSID: 'Xiaomi_Black'[redacted]
+[10:26:16][C][wifi:366]:   Gateway: 192.168.31.1
+[10:26:16][C][wifi:367]:   DNS1: 192.168.31.1
+[10:26:16][C][wifi:368]:   DNS2: 0.0.0.0
+[10:26:16][C][logger:274]: Logger:
+[10:26:16][C][logger:275]:   Level: DEBUG
+[10:26:16][C][logger:276]:   Log Baud Rate: 115200
+[10:26:16][C][logger:277]:   Hardware UART: UART0
+[10:26:16][C][i2c.arduino:038]: I2C Bus:
+[10:26:16][C][i2c.arduino:039]:   SDA Pin: GPIO22
+[10:26:16][C][i2c.arduino:040]:   SCL Pin: GPIO23
+[10:26:16][C][i2c.arduino:041]:   Frequency: 50000 Hz
+[10:26:16][C][i2c.arduino:044]:   Recovery: bus successfully recovered
+[10:26:16][C][switch.gpio:050]: GPIO Switch 'Rel 1 Switch'
+[10:26:16][C][switch.gpio:051]:   Pin: GPIO25
+[10:26:16][C][switch.gpio:073]:   Restore Mode: Restore (Defaults to OFF)
+[10:26:16][C][ads1115:070]: Setting up ADS1115...
+[10:26:16][C][ads1115:071]:   Address: 0x48
+[10:26:17][C][ads1115:077]:   Sensor 'TDS Sensor'
+[10:26:17][C][ads1115:077]:     Device Class: 'voltage'
+[10:26:17][C][ads1115:077]:     State Class: 'measurement'
+[10:26:17][C][ads1115:077]:     Unit of Measurement: 'TDS'
+[10:26:17][C][ads1115:077]:     Accuracy Decimals: 2
+[10:26:17][C][ads1115:078]:     Multiplexer: 4
+[10:26:17][C][ads1115:079]:     Gain: 2
+[10:26:17][C][ads1115:077]:   Sensor 'PH Sensor'
+[10:26:17][C][ads1115:077]:     Device Class: 'voltage'
+[10:26:17][C][ads1115:077]:     State Class: 'measurement'
+[10:26:17][C][ads1115:077]:     Unit of Measurement: 'Ph'
+[10:26:17][C][ads1115:077]:     Accuracy Decimals: 2
+[10:26:17][C][ads1115:078]:     Multiplexer: 5
+[10:26:17][C][ads1115:079]:     Gain: 2
+[10:26:17][C][hx711:021]: HX711 'HX711 Value'
+[10:26:17][C][hx711:021]:   State Class: 'measurement'
+[10:26:17][C][hx711:021]:   Unit of Measurement: 'L'
+[10:26:17][C][hx711:021]:   Accuracy Decimals: 2
+[10:26:17][C][hx711:021]:   Icon: 'mdi:scale'
+[10:26:17][C][hx711:022]:   DOUT Pin: GPIO32
+[10:26:17][C][hx711:023]:   SCK Pin: GPIO33
+[10:26:17][C][hx711:024]:   Update Interval: 1.0s
+[10:26:17][C][captive_portal:088]: Captive Portal:
+[10:26:17][C][mdns:084]: mDNS:
+[10:26:17][C][mdns:085]:   Hostname: hydro-controller
+[10:26:17][C][ota:085]: Over-The-Air Updates:
+[10:26:17][C][ota:086]:   Address: hydro-controller.local:3232
+[10:26:17][C][ota:089]:   Using Password.
+[10:26:17][C][api:138]: API Server:
+[10:26:17][C][api:139]:   Address: hydro-controller.local:6053
+[10:26:17][C][api:143]:   Using noise encryption: NO
+[10:26:17][D][ads1115:164]: 'PH Sensor': Got Voltage=1.179125V
+[10:26:17][D][hx711:031]: 'HX711 Value': Got value 556879
+[10:26:26][D][hx711:031]: 'HX711 Value': Got value 556901
+[10:26:27][D][ads1115:164]: 'PH Sensor': Got Voltage=1.178125V
+[10:26:27][D][hx711:031]: 'HX711 Value': Got value 556890
+[10:26:28][D][ads1115:164]: 'PH Sensor': Got Voltage=1.178500V
+[10:26:28][D][hx711:031]: 'HX711 Value': Got value 556923
+[10:26:28][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[10:26:28][D][sensor:125]: 'TDS Sensor': Sending state 828.37970 TDS with 2 decimals of accuracy
+[10:26:29][D][ads1115:164]: 'PH Sensor': Got Voltage=1.178437V
+[10:26:29][D][hx711:031]: 'HX711 Value': Got value 556904
+[10:26:29][D][sensor:125]: 'HX711 Value': Sending state 63.39100 L with 2 decimals of accuracy
+[10:26:30][D][ads1115:164]: 'PH Sensor': Got Voltage=1.178187V
+[10:26:30][D][hx711:031]: 'HX711 Value': Got value 556899
+[10:26:31][D][ads1115:164]: 'PH Sensor': Got Voltage=1.177812V
+[10:26:31][D][hx711:031]: 'HX711 Value': Got value 556941
+[10:26:32][D][ads1115:164]: 'PH Sensor': Got Voltage=1.177688V
+[10:26:32][D][sensor:125]: 'PH Sensor': Sending state 6.77216 Ph with 2 decimals of accuracy
+[10:26:32][D][hx711:031]: 'HX711 Value': Got value 556932
+[10:26:33][D][ads1115:164]: 'PH Sensor': Got Voltage=1.176750V
+[10:26:42][D][ads1115:164]: 'PH Sensor': Got Voltage=1.178313V
+[10:26:42][D][hx711:031]: 'HX711 Value': Got value 556996
+[10:26:43][D][ads1115:164]: 'PH Sensor': Got Voltage=1.176500V
+[10:26:43][D][hx711:031]: 'HX711 Value': Got value 557002
+[10:26:44][D][ads1115:164]: 'PH Sensor': Got Voltage=1.177750V
+[10:26:44][D][hx711:031]: 'HX711 Value': Got value 557009
+[10:26:44][D][sensor:125]: 'HX711 Value': Sending state 63.40204 L with 2 decimals of accuracy
+[10:26:45][D][ads1115:164]: 'PH Sensor': Got Voltage=1.177938V
+[10:26:45][D][hx711:031]: 'HX711 Value': Got value 557004
+[10:26:51][D][ads1115:164]: 'PH Sensor': Got Voltage=1.179500V
