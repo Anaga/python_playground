@@ -1,7 +1,11 @@
-"""This file is for blah blah blah """
+"""This script file is for parsing logs from ESP Home addon, 
+    and to split one common log to separate CSV files by modules, 
+    extract value and unit from each line of log.
+    """
 
 import re
 from os.path import exists as file_exists
+import csv 
 import argparse
 
 def init():
@@ -88,10 +92,29 @@ def message_pars(message, module):
 
     return ret_dict
 
+def write_CSV_row(common_dict, writer):
+    """
+    Function to write value in single CSV file
+    Headers already writed
+    header = ['Time', 'Module', 'Class', 'Name', 'Value', 'Unit']
+    """
+    time    = common_dict.get('time')
+    module  = common_dict.get('module')
+    clas    = common_dict.get('class')
+    name    = common_dict.get('name')
+    value   = common_dict.get('value')
+    unit    = common_dict.get('unit')
+
+    row = [time, module, clas, name, value, unit]
+    writer.writerow(row)
+
+
+
 def main():
     'main function'
     log = init()
     module_list = []
+    files_dict = {}
     for row in log:
         vals_dict = parse_row(row)
         if len(vals_dict) == 0: #skip empty dict
@@ -107,9 +130,24 @@ def main():
         unit = data_dict.get('unit')
         print(F'{time} => {mod} => {name} => {val} {unit}')
 
+        common_dict = {**vals_dict, **data_dict}
+        header = ['Time', 'Module', 'Class', 'Name', 'Value', 'Unit']
         if mod not in module_list:
             module_list.append(mod)
-            print(F'Got new module {time} => {mod} => {mess}')
+            print("Make new SCV file for this module")
+            file_name = mod + ".csv"
+            file_desc = open(file_name,'w', newline="\n")     # 1. create and open a text file
+            csvwriter = csv.writer(file_desc, delimiter=';')  # 2. create a csvwriter object
+            csvwriter.writerow(header)                        # 3. write the header
+            files_dict[mod] = csvwriter                       # 4. save csvwriter object
+            
+            print(F'Got new module {time} => {mod} => {name} => {val}')
+
+        #add one row with curent value to csv file with  csvwriter object from files_dict
+        csvwriter = files_dict.get(mod)
+        write_CSV_row(common_dict, csvwriter)
+
     print(F"All Modules are: {module_list}")
+        
 
 main()

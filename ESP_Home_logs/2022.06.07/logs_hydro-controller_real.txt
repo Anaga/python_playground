@@ -1,0 +1,850 @@
+INFO Reading configuration /config/esphome/hydro-controller.yaml...
+INFO Starting log output from hydro-controller.local using esphome API
+INFO Successfully connected to hydro-controller.local
+[18:25:43][I][app:102]: ESPHome version 2022.5.0 compiled on May 24 2022, 20:28:16
+[18:25:43][C][wifi:491]: WiFi:
+[18:25:43][C][wifi:353]:   Local MAC: 78:E3:6D:19:29:00
+[18:25:43][C][wifi:354]:   SSID: 'Xiaomi_Black'[redacted]
+[18:25:43][C][wifi:355]:   IP Address: 192.168.31.63
+[18:25:43][C][wifi:357]:   BSSID: 88:C3:97:80:2B:1F[redacted]
+[18:25:43][C][wifi:358]:   Hostname: 'hydro-controller'
+[18:25:43][C][wifi:360]:   Signal strength: -63 dB ▂▄▆█
+[18:25:43][C][wifi:364]:   Channel: 11
+[18:25:43][C][wifi:365]:   Subnet: 255.255.255.0
+[18:25:43][C][wifi:366]:   Gateway: 192.168.31.1
+[18:25:43][C][wifi:367]:   DNS1: 192.168.31.1
+[18:25:43][C][wifi:368]:   DNS2: 0.0.0.0
+[18:25:43][C][logger:274]: Logger:
+[18:25:43][C][logger:275]:   Level: DEBUG
+[18:25:43][C][logger:276]:   Log Baud Rate: 115200
+[18:25:43][C][logger:277]:   Hardware UART: UART0
+[18:25:43][C][i2c.arduino:038]: I2C Bus:
+[18:25:43][C][i2c.arduino:039]:   SDA Pin: GPIO22
+[18:25:43][C][i2c.arduino:040]:   SCL Pin: GPIO23
+[18:25:43][C][i2c.arduino:041]:   Frequency: 50000 Hz
+[18:25:43][C][i2c.arduino:044]:   Recovery: bus successfully recovered
+[18:25:43][C][switch.gpio:050]: GPIO Switch 'Rel 1 Switch'
+[18:25:43][C][switch.gpio:051]:   Pin: GPIO25
+[18:25:43][C][switch.gpio:073]:   Restore Mode: Restore (Defaults to OFF)
+[18:25:43][C][ads1115:070]: Setting up ADS1115...
+[18:25:44][C][ads1115:071]:   Address: 0x48
+[18:25:44][C][ads1115:077]:   Sensor 'TDS Sensor'
+[18:25:44][C][ads1115:077]:     Device Class: 'voltage'
+[18:25:44][C][ads1115:077]:     State Class: 'measurement'
+[18:25:44][C][ads1115:077]:     Unit of Measurement: 'TDS'
+[18:25:44][C][ads1115:077]:     Accuracy Decimals: 2
+[18:25:44][C][ads1115:078]:     Multiplexer: 4
+[18:25:44][C][ads1115:079]:     Gain: 2
+[18:25:44][C][ads1115:077]:   Sensor 'PH Sensor'
+[18:25:44][C][ads1115:077]:     Device Class: 'voltage'
+[18:25:44][C][ads1115:077]:     State Class: 'measurement'
+[18:25:44][C][ads1115:077]:     Unit of Measurement: 'Ph'
+[18:25:44][C][ads1115:077]:     Accuracy Decimals: 2
+[18:25:44][C][ads1115:078]:     Multiplexer: 5
+[18:25:44][C][ads1115:079]:     Gain: 2
+[18:25:44][C][hx711:021]: HX711 'HX711 Value'
+[18:25:44][C][hx711:021]:   State Class: 'measurement'
+[18:25:44][C][hx711:021]:   Unit of Measurement: 'L'
+[18:25:44][C][hx711:021]:   Accuracy Decimals: 2
+[18:25:44][C][hx711:021]:   Icon: 'mdi:scale'
+[18:25:44][C][hx711:022]:   DOUT Pin: GPIO32
+[18:25:44][C][hx711:023]:   SCK Pin: GPIO33
+[18:25:44][C][hx711:024]:   Update Interval: 1.0s
+[18:25:44][C][captive_portal:088]: Captive Portal:
+[18:25:44][C][mdns:084]: mDNS:
+[18:25:44][C][mdns:085]:   Hostname: hydro-controller
+[18:25:44][D][ads1115:164]: 'PH Sensor': Got Voltage=1.175625V
+[18:25:44][C][ota:085]: Over-The-Air Updates:
+[18:25:44][C][ota:086]:   Address: hydro-controller.local:3232
+[18:25:44][C][ota:089]:   Using Password.
+[18:25:44][C][api:138]: API Server:
+[18:25:44][C][api:139]:   Address: hydro-controller.local:6053
+[18:25:44][C][api:143]:   Using noise encryption: NO
+[18:25:44][D][hx711:031]: 'HX711 Value': Got value 612837
+[18:25:45][D][ads1115:164]: 'PH Sensor': Got Voltage=1.174562V
+[18:25:45][D][hx711:031]: 'HX711 Value': Got value 612844
+[18:25:46][D][ads1115:164]: 'PH Sensor': Got Voltage=1.172125V
+[18:25:46][D][hx711:031]: 'HX711 Value': Got value 612907
+[18:25:47][D][ads1115:164]: 'PH Sensor': Got Voltage=1.169500V
+[18:25:47][D][hx711:031]: 'HX711 Value': Got value 612827
+[18:25:48][D][ads1115:164]: 'PH Sensor': Got Voltage=1.167938V
+[18:25:48][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:25:48][D][hx711:031]: 'HX711 Value': Got value 612839
+[18:25:49][D][ads1115:164]: 'PH Sensor': Got Voltage=1.166000V
+[18:25:49][D][hx711:031]: 'HX711 Value': Got value 612846
+[18:25:49][D][sensor:125]: 'HX711 Value': Sending state 69.30273 L with 2 decimals of accuracy
+[18:25:50][D][ads1115:164]: 'PH Sensor': Got Voltage=1.164125V
+[18:25:50][D][sensor:125]: 'PH Sensor': Sending state 7.28377 Ph with 2 decimals of accuracy
+[18:25:50][D][hx711:031]: 'HX711 Value': Got value 612823
+[18:25:51][D][ads1115:164]: 'PH Sensor': Got Voltage=1.162125V
+[18:25:51][D][hx711:031]: 'HX711 Value': Got value 612901
+[18:25:52][D][ads1115:164]: 'PH Sensor': Got Voltage=1.160938V
+[18:25:52][D][hx711:031]: 'HX711 Value': Got value 612818
+[18:25:53][D][ads1115:164]: 'PH Sensor': Got Voltage=1.159500V
+[18:25:53][D][hx711:031]: 'HX711 Value': Got value 612829
+[18:25:54][D][ads1115:164]: 'PH Sensor': Got Voltage=1.156625V
+[18:25:54][D][hx711:031]: 'HX711 Value': Got value 612899
+[18:25:55][D][ads1115:164]: 'PH Sensor': Got Voltage=1.156500V
+[18:25:55][D][hx711:031]: 'HX711 Value': Got value 612860
+[18:25:56][D][ads1115:164]: 'PH Sensor': Got Voltage=1.155625V
+[18:25:56][D][hx711:031]: 'HX711 Value': Got value 612853
+[18:25:57][D][ads1115:164]: 'PH Sensor': Got Voltage=1.154438V
+[18:25:57][D][hx711:031]: 'HX711 Value': Got value 612886
+[18:25:58][D][ads1115:164]: 'PH Sensor': Got Voltage=1.153375V
+[18:25:58][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:25:58][D][sensor:125]: 'TDS Sensor': Sending state 828.37970 TDS with 2 decimals of accuracy
+[18:25:58][D][hx711:031]: 'HX711 Value': Got value 612815
+[18:25:59][D][ads1115:164]: 'PH Sensor': Got Voltage=1.152250V
+[18:25:59][D][hx711:031]: 'HX711 Value': Got value 612837
+[18:26:00][D][ads1115:164]: 'PH Sensor': Got Voltage=1.150938V
+[18:26:00][D][hx711:031]: 'HX711 Value': Got value 612811
+[18:26:01][D][ads1115:164]: 'PH Sensor': Got Voltage=1.150250V
+[18:26:01][D][hx711:031]: 'HX711 Value': Got value 612829
+[18:26:02][D][ads1115:164]: 'PH Sensor': Got Voltage=1.149312V
+[18:26:02][D][hx711:031]: 'HX711 Value': Got value 612848
+[18:26:03][D][ads1115:164]: 'PH Sensor': Got Voltage=1.148438V
+[18:26:03][D][hx711:031]: 'HX711 Value': Got value 612835
+[18:26:04][D][ads1115:164]: 'PH Sensor': Got Voltage=1.147250V
+[18:26:04][D][hx711:031]: 'HX711 Value': Got value 612819
+[18:26:04][D][sensor:125]: 'HX711 Value': Sending state 69.30376 L with 2 decimals of accuracy
+[18:26:05][D][ads1115:164]: 'PH Sensor': Got Voltage=1.146688V
+[18:26:05][D][hx711:031]: 'HX711 Value': Got value 612817
+[18:26:06][D][ads1115:164]: 'PH Sensor': Got Voltage=1.145875V
+[18:26:06][D][hx711:031]: 'HX711 Value': Got value 612832
+[18:26:07][D][ads1115:164]: 'PH Sensor': Got Voltage=1.145062V
+[18:26:07][D][hx711:031]: 'HX711 Value': Got value 612831
+[18:26:08][D][ads1115:164]: 'PH Sensor': Got Voltage=1.144250V
+[18:26:08][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:26:08][D][hx711:031]: 'HX711 Value': Got value 612855
+[18:26:09][D][ads1115:164]: 'PH Sensor': Got Voltage=1.144000V
+[18:26:09][D][hx711:031]: 'HX711 Value': Got value 612852
+[18:26:10][D][ads1115:164]: 'PH Sensor': Got Voltage=1.142938V
+[18:26:10][D][sensor:125]: 'PH Sensor': Sending state 6.72429 Ph with 2 decimals of accuracy
+[18:26:10][D][hx711:031]: 'HX711 Value': Got value 612848
+[18:26:11][D][ads1115:164]: 'PH Sensor': Got Voltage=1.142187V
+[18:26:11][D][hx711:031]: 'HX711 Value': Got value 612867
+[18:26:12][D][ads1115:164]: 'PH Sensor': Got Voltage=1.141312V
+[18:26:12][D][hx711:031]: 'HX711 Value': Got value 612883
+[18:26:13][D][ads1115:164]: 'PH Sensor': Got Voltage=1.140687V
+[18:26:13][D][hx711:031]: 'HX711 Value': Got value 612863
+[18:26:14][D][ads1115:164]: 'PH Sensor': Got Voltage=1.140750V
+[18:26:14][D][hx711:031]: 'HX711 Value': Got value 612820
+[18:26:15][D][ads1115:164]: 'PH Sensor': Got Voltage=1.139750V
+[18:26:15][D][hx711:031]: 'HX711 Value': Got value 612860
+[18:26:16][D][ads1115:164]: 'PH Sensor': Got Voltage=1.139063V
+[18:26:16][D][hx711:031]: 'HX711 Value': Got value 612874
+[18:26:17][D][ads1115:164]: 'PH Sensor': Got Voltage=1.138188V
+[18:26:17][D][hx711:031]: 'HX711 Value': Got value 612858
+[18:26:18][D][ads1115:164]: 'PH Sensor': Got Voltage=1.137750V
+[18:26:18][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:26:18][D][hx711:031]: 'HX711 Value': Got value 612872
+[18:26:19][D][ads1115:164]: 'PH Sensor': Got Voltage=1.137625V
+[18:26:19][D][hx711:031]: 'HX711 Value': Got value 612856
+[18:26:19][D][sensor:125]: 'HX711 Value': Sending state 69.30478 L with 2 decimals of accuracy
+[18:26:20][D][ads1115:164]: 'PH Sensor': Got Voltage=1.137000V
+[18:26:20][D][hx711:031]: 'HX711 Value': Got value 612841
+[18:26:21][D][ads1115:164]: 'PH Sensor': Got Voltage=1.136063V
+[18:26:21][D][hx711:031]: 'HX711 Value': Got value 612864
+[18:26:22][D][ads1115:164]: 'PH Sensor': Got Voltage=1.135500V
+[18:26:22][D][hx711:031]: 'HX711 Value': Got value 612866
+[18:26:23][D][ads1115:164]: 'PH Sensor': Got Voltage=1.134938V
+[18:26:23][D][hx711:031]: 'HX711 Value': Got value 612895
+[18:26:24][D][ads1115:164]: 'PH Sensor': Got Voltage=1.134500V
+[18:26:24][D][hx711:031]: 'HX711 Value': Got value 612847
+[18:26:25][D][ads1115:164]: 'PH Sensor': Got Voltage=1.134250V
+[18:26:25][D][hx711:031]: 'HX711 Value': Got value 612884
+[18:26:26][D][ads1115:164]: 'PH Sensor': Got Voltage=1.133125V
+[18:26:26][D][hx711:031]: 'HX711 Value': Got value 612843
+[18:26:27][D][ads1115:164]: 'PH Sensor': Got Voltage=1.133188V
+[18:26:27][D][hx711:031]: 'HX711 Value': Got value 612840
+[18:26:28][D][ads1115:164]: 'PH Sensor': Got Voltage=1.132437V
+[18:26:28][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:26:28][D][hx711:031]: 'HX711 Value': Got value 612843
+[18:26:29][D][ads1115:164]: 'PH Sensor': Got Voltage=1.131875V
+[18:26:29][D][hx711:031]: 'HX711 Value': Got value 612847
+[18:26:30][D][ads1115:164]: 'PH Sensor': Got Voltage=1.131250V
+[18:26:30][D][sensor:125]: 'PH Sensor': Sending state 6.57260 Ph with 2 decimals of accuracy
+[18:26:30][D][hx711:031]: 'HX711 Value': Got value 612871
+[18:26:31][D][ads1115:164]: 'PH Sensor': Got Voltage=1.130500V
+[18:26:31][D][hx711:031]: 'HX711 Value': Got value 612879
+[18:26:32][D][ads1115:164]: 'PH Sensor': Got Voltage=1.130875V
+[18:26:32][D][hx711:031]: 'HX711 Value': Got value 612842
+[18:26:33][D][ads1115:164]: 'PH Sensor': Got Voltage=1.130000V
+[18:26:33][D][hx711:031]: 'HX711 Value': Got value 612853
+[18:26:34][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128125V
+[18:26:34][D][hx711:031]: 'HX711 Value': Got value 612871
+[18:26:34][D][sensor:125]: 'HX711 Value': Sending state 69.30533 L with 2 decimals of accuracy
+[18:26:35][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128750V
+[18:26:35][D][hx711:031]: 'HX711 Value': Got value 612832
+[18:26:36][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128625V
+[18:26:36][D][hx711:031]: 'HX711 Value': Got value 612832
+[18:26:37][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128250V
+[18:26:37][D][hx711:031]: 'HX711 Value': Got value 612830
+[18:26:38][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127813V
+[18:26:38][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:26:38][D][hx711:031]: 'HX711 Value': Got value 612847
+[18:26:39][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127500V
+[18:26:39][D][hx711:031]: 'HX711 Value': Got value 612868
+[18:26:40][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127125V
+[18:26:40][D][hx711:031]: 'HX711 Value': Got value 612832
+[18:26:41][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126938V
+[18:26:41][D][hx711:031]: 'HX711 Value': Got value 612860
+[18:26:42][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126375V
+[18:26:42][D][hx711:031]: 'HX711 Value': Got value 612871
+[18:26:43][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125937V
+[18:26:43][D][hx711:031]: 'HX711 Value': Got value 612843
+[18:26:44][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125250V
+[18:26:44][D][hx711:031]: 'HX711 Value': Got value 612841
+[18:26:45][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125687V
+[18:26:45][D][hx711:031]: 'HX711 Value': Got value 612839
+[18:26:46][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125000V
+[18:26:46][D][hx711:031]: 'HX711 Value': Got value 612859
+[18:26:47][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124625V
+[18:26:47][D][hx711:031]: 'HX711 Value': Got value 612867
+[18:26:48][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124187V
+[18:26:48][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:26:48][D][hx711:031]: 'HX711 Value': Got value 612893
+[18:26:49][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124375V
+[18:26:49][D][hx711:031]: 'HX711 Value': Got value 612887
+[18:26:49][D][sensor:125]: 'HX711 Value': Sending state 69.30412 L with 2 decimals of accuracy
+[18:26:50][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123813V
+[18:26:50][D][sensor:125]: 'PH Sensor': Sending state 6.50282 Ph with 2 decimals of accuracy
+[18:26:50][D][hx711:031]: 'HX711 Value': Got value 612900
+[18:26:51][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123438V
+[18:26:51][D][hx711:031]: 'HX711 Value': Got value 612839
+[18:26:52][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123062V
+[18:26:52][D][hx711:031]: 'HX711 Value': Got value 612883
+[18:26:53][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122875V
+[18:26:53][D][hx711:031]: 'HX711 Value': Got value 612899
+[18:26:54][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122937V
+[18:26:54][D][hx711:031]: 'HX711 Value': Got value 612889
+[18:26:55][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122563V
+[18:26:55][D][hx711:031]: 'HX711 Value': Got value 612901
+[18:26:56][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122125V
+[18:26:56][D][hx711:031]: 'HX711 Value': Got value 612852
+[18:26:57][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121500V
+[18:26:57][D][hx711:031]: 'HX711 Value': Got value 612886
+[18:26:58][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121750V
+[18:26:58][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:26:58][D][hx711:031]: 'HX711 Value': Got value 612862
+[18:26:59][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121562V
+[18:26:59][D][hx711:031]: 'HX711 Value': Got value 612868
+[18:27:00][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121312V
+[18:27:00][D][hx711:031]: 'HX711 Value': Got value 612880
+[18:27:01][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120875V
+[18:27:01][D][hx711:031]: 'HX711 Value': Got value 612903
+[18:27:02][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120937V
+[18:27:02][D][hx711:031]: 'HX711 Value': Got value 612867
+[18:27:03][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120750V
+[18:27:03][D][hx711:031]: 'HX711 Value': Got value 612858
+[18:27:04][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120687V
+[18:27:04][D][hx711:031]: 'HX711 Value': Got value 612912
+[18:27:04][D][sensor:125]: 'HX711 Value': Sending state 69.30809 L with 2 decimals of accuracy
+[18:27:05][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120250V
+[18:27:05][D][hx711:031]: 'HX711 Value': Got value 612853
+[18:27:06][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120062V
+[18:27:06][D][hx711:031]: 'HX711 Value': Got value 612872
+[18:27:07][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120062V
+[18:27:07][D][hx711:031]: 'HX711 Value': Got value 612866
+[18:27:08][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120000V
+[18:27:08][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:27:08][D][hx711:031]: 'HX711 Value': Got value 612902
+[18:27:09][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119688V
+[18:27:09][D][hx711:031]: 'HX711 Value': Got value 612878
+[18:27:10][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119250V
+[18:27:10][D][sensor:125]: 'PH Sensor': Sending state 6.45851 Ph with 2 decimals of accuracy
+[18:27:10][D][hx711:031]: 'HX711 Value': Got value 612908
+[18:27:11][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119500V
+[18:27:11][D][hx711:031]: 'HX711 Value': Got value 612903
+[18:27:12][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119437V
+[18:27:12][D][hx711:031]: 'HX711 Value': Got value 612869
+[18:27:13][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119437V
+[18:27:13][D][hx711:031]: 'HX711 Value': Got value 612875
+[18:27:14][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118937V
+[18:27:14][D][hx711:031]: 'HX711 Value': Got value 612908
+[18:27:15][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119063V
+[18:27:15][D][hx711:031]: 'HX711 Value': Got value 612901
+[18:27:16][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119125V
+[18:27:16][D][hx711:031]: 'HX711 Value': Got value 612904
+[18:27:17][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118875V
+[18:27:17][D][hx711:031]: 'HX711 Value': Got value 612890
+[18:27:18][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118750V
+[18:27:18][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:27:18][D][hx711:031]: 'HX711 Value': Got value 612882
+[18:27:19][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118500V
+[18:27:19][D][hx711:031]: 'HX711 Value': Got value 612861
+[18:27:19][D][sensor:125]: 'HX711 Value': Sending state 69.30788 L with 2 decimals of accuracy
+[18:27:20][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118875V
+[18:27:20][D][hx711:031]: 'HX711 Value': Got value 612894
+[18:27:21][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118562V
+[18:27:21][D][hx711:031]: 'HX711 Value': Got value 612905
+[18:27:22][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118625V
+[18:27:22][D][hx711:031]: 'HX711 Value': Got value 612889
+[18:27:23][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118062V
+[18:27:23][D][hx711:031]: 'HX711 Value': Got value 612905
+[18:27:24][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118438V
+[18:27:24][D][hx711:031]: 'HX711 Value': Got value 612858
+[18:27:25][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118500V
+[18:27:25][D][hx711:031]: 'HX711 Value': Got value 612875
+[18:27:26][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118000V
+[18:27:26][D][hx711:031]: 'HX711 Value': Got value 612938
+[18:27:27][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117875V
+[18:27:27][D][hx711:031]: 'HX711 Value': Got value 612867
+[18:27:28][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117875V
+[18:27:28][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:27:28][D][hx711:031]: 'HX711 Value': Got value 612870
+[18:27:29][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117937V
+[18:27:29][D][hx711:031]: 'HX711 Value': Got value 612927
+[18:27:30][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117937V
+[18:27:30][D][sensor:125]: 'PH Sensor': Sending state 6.43433 Ph with 2 decimals of accuracy
+[18:27:30][D][hx711:031]: 'HX711 Value': Got value 612859
+[18:27:31][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117813V
+[18:27:31][D][hx711:031]: 'HX711 Value': Got value 612907
+[18:27:32][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117500V
+[18:27:32][D][hx711:031]: 'HX711 Value': Got value 612888
+[18:27:33][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117750V
+[18:27:33][D][hx711:031]: 'HX711 Value': Got value 612873
+[18:27:34][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117687V
+[18:27:34][D][hx711:031]: 'HX711 Value': Got value 612888
+[18:27:34][D][sensor:125]: 'HX711 Value': Sending state 69.30775 L with 2 decimals of accuracy
+[18:27:35][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117500V
+[18:27:35][D][hx711:031]: 'HX711 Value': Got value 612879
+[18:27:36][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117188V
+[18:27:36][D][hx711:031]: 'HX711 Value': Got value 612895
+[18:27:37][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117563V
+[18:27:37][D][hx711:031]: 'HX711 Value': Got value 612879
+[18:27:38][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117625V
+[18:27:38][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:27:38][D][hx711:031]: 'HX711 Value': Got value 612931
+[18:27:39][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117500V
+[18:27:39][D][hx711:031]: 'HX711 Value': Got value 612872
+[18:27:40][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117437V
+[18:27:40][D][hx711:031]: 'HX711 Value': Got value 612847
+[18:27:41][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117375V
+[18:27:41][D][hx711:031]: 'HX711 Value': Got value 612906
+[18:27:42][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117437V
+[18:27:42][D][hx711:031]: 'HX711 Value': Got value 612917
+[18:27:43][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117375V
+[18:27:43][D][hx711:031]: 'HX711 Value': Got value 612897
+[18:27:44][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117250V
+[18:27:44][D][hx711:031]: 'HX711 Value': Got value 612855
+[18:27:45][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117000V
+[18:27:45][D][hx711:031]: 'HX711 Value': Got value 612863
+[18:27:46][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117250V
+[18:27:46][D][hx711:031]: 'HX711 Value': Got value 612917
+[18:27:47][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117313V
+[18:27:47][D][hx711:031]: 'HX711 Value': Got value 612902
+[18:27:48][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117313V
+[18:27:48][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:27:48][D][hx711:031]: 'HX711 Value': Got value 612857
+[18:27:49][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117313V
+[18:27:49][D][hx711:031]: 'HX711 Value': Got value 612868
+[18:27:49][D][sensor:125]: 'HX711 Value': Sending state 69.30804 L with 2 decimals of accuracy
+[18:27:50][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117313V
+[18:27:50][D][sensor:125]: 'PH Sensor': Sending state 6.42332 Ph with 2 decimals of accuracy
+[18:27:50][D][hx711:031]: 'HX711 Value': Got value 612888
+[18:27:51][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117313V
+[18:27:51][D][hx711:031]: 'HX711 Value': Got value 612908
+[18:27:52][D][ads1115:164]: 'PH Sensor': Got Voltage=1.115875V
+[18:27:52][D][hx711:031]: 'HX711 Value': Got value 612902
+[18:27:53][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117188V
+[18:27:53][D][hx711:031]: 'HX711 Value': Got value 612876
+[18:27:54][D][ads1115:164]: 'PH Sensor': Got Voltage=1.116500V
+[18:27:54][D][hx711:031]: 'HX711 Value': Got value 612887
+[18:27:55][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117625V
+[18:27:55][D][hx711:031]: 'HX711 Value': Got value 612882
+[18:27:56][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117250V
+[18:27:56][D][hx711:031]: 'HX711 Value': Got value 612915
+[18:27:57][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117188V
+[18:27:57][D][hx711:031]: 'HX711 Value': Got value 612888
+[18:27:58][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117000V
+[18:27:58][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:27:58][D][hx711:031]: 'HX711 Value': Got value 612863
+[18:27:59][D][ads1115:164]: 'PH Sensor': Got Voltage=1.116750V
+[18:27:59][D][hx711:031]: 'HX711 Value': Got value 612908
+[18:28:00][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117250V
+[18:28:00][D][hx711:031]: 'HX711 Value': Got value 612900
+[18:28:01][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117313V
+[18:28:01][D][hx711:031]: 'HX711 Value': Got value 612905
+[18:28:02][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117000V
+[18:28:02][D][hx711:031]: 'HX711 Value': Got value 612911
+[18:28:03][D][ads1115:164]: 'PH Sensor': Got Voltage=1.116938V
+[18:28:03][D][hx711:031]: 'HX711 Value': Got value 612886
+[18:28:04][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117313V
+[18:28:04][D][hx711:031]: 'HX711 Value': Got value 612898
+[18:28:04][D][sensor:125]: 'HX711 Value': Sending state 69.30894 L with 2 decimals of accuracy
+[18:28:05][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117313V
+[18:28:05][D][hx711:031]: 'HX711 Value': Got value 612901
+[18:28:06][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117250V
+[18:28:06][D][hx711:031]: 'HX711 Value': Got value 612873
+[18:28:07][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117125V
+[18:28:07][D][hx711:031]: 'HX711 Value': Got value 612882
+[18:28:08][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117375V
+[18:28:08][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:28:08][D][hx711:031]: 'HX711 Value': Got value 612910
+[18:28:09][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117813V
+[18:28:09][D][hx711:031]: 'HX711 Value': Got value 612905
+[18:28:10][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117563V
+[18:28:10][D][sensor:125]: 'PH Sensor': Sending state 6.41939 Ph with 2 decimals of accuracy
+[18:28:10][D][hx711:031]: 'HX711 Value': Got value 612884
+[18:28:11][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117500V
+[18:28:11][D][hx711:031]: 'HX711 Value': Got value 612906
+[18:28:12][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117687V
+[18:28:12][D][hx711:031]: 'HX711 Value': Got value 612917
+[18:28:13][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117687V
+[18:28:13][D][hx711:031]: 'HX711 Value': Got value 612888
+[18:28:14][D][ads1115:164]: 'PH Sensor': Got Voltage=1.116500V
+[18:28:14][D][hx711:031]: 'HX711 Value': Got value 612925
+[18:28:15][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117563V
+[18:28:15][D][hx711:031]: 'HX711 Value': Got value 612894
+[18:28:16][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117000V
+[18:28:16][D][hx711:031]: 'HX711 Value': Got value 612871
+[18:28:17][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118125V
+[18:28:17][D][hx711:031]: 'HX711 Value': Got value 612901
+[18:28:18][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117875V
+[18:28:18][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:28:18][D][hx711:031]: 'HX711 Value': Got value 612898
+[18:28:19][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118125V
+[18:28:19][D][hx711:031]: 'HX711 Value': Got value 612907
+[18:28:19][D][sensor:125]: 'HX711 Value': Sending state 69.30904 L with 2 decimals of accuracy
+[18:28:20][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117625V
+[18:28:20][D][hx711:031]: 'HX711 Value': Got value 612889
+[18:28:21][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117875V
+[18:28:21][D][hx711:031]: 'HX711 Value': Got value 612929
+[18:28:22][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118125V
+[18:28:22][D][hx711:031]: 'HX711 Value': Got value 612885
+[18:28:23][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117937V
+[18:28:23][D][hx711:031]: 'HX711 Value': Got value 612895
+[18:28:24][D][ads1115:164]: 'PH Sensor': Got Voltage=1.116625V
+[18:28:24][D][hx711:031]: 'HX711 Value': Got value 612909
+[18:28:25][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118438V
+[18:28:25][D][hx711:031]: 'HX711 Value': Got value 612902
+[18:28:26][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118250V
+[18:28:26][D][hx711:031]: 'HX711 Value': Got value 612933
+[18:28:27][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118312V
+[18:28:27][D][hx711:031]: 'HX711 Value': Got value 612890
+[18:28:28][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118312V
+[18:28:28][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:28:28][D][sensor:125]: 'TDS Sensor': Sending state 828.37970 TDS with 2 decimals of accuracy
+[18:28:28][D][hx711:031]: 'HX711 Value': Got value 612863
+[18:28:29][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117937V
+[18:28:29][D][hx711:031]: 'HX711 Value': Got value 612936
+[18:28:30][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118250V
+[18:28:30][D][sensor:125]: 'PH Sensor': Sending state 6.42067 Ph with 2 decimals of accuracy
+[18:28:30][D][hx711:031]: 'HX711 Value': Got value 612894
+[18:28:31][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118625V
+[18:28:31][D][hx711:031]: 'HX711 Value': Got value 612890
+[18:28:32][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118188V
+[18:28:32][D][hx711:031]: 'HX711 Value': Got value 612909
+[18:28:33][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118438V
+[18:28:33][D][hx711:031]: 'HX711 Value': Got value 612929
+[18:28:34][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118438V
+[18:28:34][D][hx711:031]: 'HX711 Value': Got value 612893
+[18:28:34][D][sensor:125]: 'HX711 Value': Sending state 69.30943 L with 2 decimals of accuracy
+[18:28:35][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118500V
+[18:28:35][D][hx711:031]: 'HX711 Value': Got value 612916
+[18:28:36][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118812V
+[18:28:36][D][hx711:031]: 'HX711 Value': Got value 612963
+[18:28:37][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118438V
+[18:28:37][D][hx711:031]: 'HX711 Value': Got value 612877
+[18:28:38][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118125V
+[18:28:38][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:28:38][D][hx711:031]: 'HX711 Value': Got value 612942
+[18:28:39][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118937V
+[18:28:39][D][hx711:031]: 'HX711 Value': Got value 612890
+[18:28:40][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118562V
+[18:28:40][D][hx711:031]: 'HX711 Value': Got value 612910
+[18:28:41][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118625V
+[18:28:41][D][hx711:031]: 'HX711 Value': Got value 612933
+[18:28:42][D][ads1115:164]: 'PH Sensor': Got Voltage=1.117937V
+[18:28:42][D][hx711:031]: 'HX711 Value': Got value 612917
+[18:28:43][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118562V
+[18:28:43][D][hx711:031]: 'HX711 Value': Got value 612929
+[18:28:44][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119063V
+[18:28:44][D][hx711:031]: 'HX711 Value': Got value 612931
+[18:28:45][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118875V
+[18:28:45][D][hx711:031]: 'HX711 Value': Got value 612939
+[18:28:46][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118750V
+[18:28:46][D][hx711:031]: 'HX711 Value': Got value 612929
+[18:28:47][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118750V
+[18:28:47][D][hx711:031]: 'HX711 Value': Got value 612927
+[18:28:48][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119313V
+[18:28:48][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:28:48][D][hx711:031]: 'HX711 Value': Got value 612928
+[18:28:49][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119437V
+[18:28:49][D][hx711:031]: 'HX711 Value': Got value 612949
+[18:28:49][D][sensor:125]: 'HX711 Value': Sending state 69.31187 L with 2 decimals of accuracy
+[18:28:50][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118937V
+[18:28:50][D][sensor:125]: 'PH Sensor': Sending state 6.42472 Ph with 2 decimals of accuracy
+[18:28:50][D][hx711:031]: 'HX711 Value': Got value 612938
+[18:28:51][D][ads1115:164]: 'PH Sensor': Got Voltage=1.118688V
+[18:28:51][D][hx711:031]: 'HX711 Value': Got value 612932
+[18:28:52][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119187V
+[18:28:52][D][hx711:031]: 'HX711 Value': Got value 612911
+[18:28:53][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119125V
+[18:28:53][D][hx711:031]: 'HX711 Value': Got value 612890
+[18:28:54][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119187V
+[18:28:54][D][hx711:031]: 'HX711 Value': Got value 612944
+[18:28:55][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119125V
+[18:28:55][D][hx711:031]: 'HX711 Value': Got value 612905
+[18:28:56][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119375V
+[18:28:56][D][hx711:031]: 'HX711 Value': Got value 612937
+[18:28:57][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119500V
+[18:28:57][D][hx711:031]: 'HX711 Value': Got value 612922
+[18:28:58][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119500V
+[18:28:58][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:28:58][D][hx711:031]: 'HX711 Value': Got value 612940
+[18:28:59][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119375V
+[18:28:59][D][hx711:031]: 'HX711 Value': Got value 612902
+[18:29:00][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119125V
+[18:29:00][D][hx711:031]: 'HX711 Value': Got value 612932
+[18:29:01][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119688V
+[18:29:01][D][hx711:031]: 'HX711 Value': Got value 612935
+[18:29:02][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119812V
+[18:29:02][D][hx711:031]: 'HX711 Value': Got value 612915
+[18:29:03][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119688V
+[18:29:03][D][hx711:031]: 'HX711 Value': Got value 612950
+[18:29:04][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119563V
+[18:29:04][D][hx711:031]: 'HX711 Value': Got value 612955
+[18:29:04][D][sensor:125]: 'HX711 Value': Sending state 69.31284 L with 2 decimals of accuracy
+[18:29:05][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119938V
+[18:29:05][D][hx711:031]: 'HX711 Value': Got value 612927
+[18:29:06][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119938V
+[18:29:06][D][hx711:031]: 'HX711 Value': Got value 612914
+[18:29:07][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119938V
+[18:29:07][D][hx711:031]: 'HX711 Value': Got value 612948
+[18:29:08][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119938V
+[18:29:08][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:29:08][D][hx711:031]: 'HX711 Value': Got value 612979
+[18:29:09][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120062V
+[18:29:09][D][hx711:031]: 'HX711 Value': Got value 612928
+[18:29:10][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120188V
+[18:29:10][D][sensor:125]: 'PH Sensor': Sending state 6.42944 Ph with 2 decimals of accuracy
+[18:29:10][D][hx711:031]: 'HX711 Value': Got value 612891
+[18:29:11][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120250V
+[18:29:11][D][hx711:031]: 'HX711 Value': Got value 612940
+[18:29:12][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120062V
+[18:29:12][D][hx711:031]: 'HX711 Value': Got value 612919
+[18:29:13][D][ads1115:164]: 'PH Sensor': Got Voltage=1.119812V
+[18:29:13][D][hx711:031]: 'HX711 Value': Got value 612933
+[18:29:14][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120312V
+[18:29:14][D][hx711:031]: 'HX711 Value': Got value 612922
+[18:29:15][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120563V
+[18:29:15][D][hx711:031]: 'HX711 Value': Got value 612940
+[18:29:16][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120500V
+[18:29:16][D][hx711:031]: 'HX711 Value': Got value 612926
+[18:29:17][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120312V
+[18:29:17][D][hx711:031]: 'HX711 Value': Got value 612895
+[18:29:18][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120687V
+[18:29:18][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:29:18][D][hx711:031]: 'HX711 Value': Got value 612948
+[18:29:19][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120750V
+[18:29:19][D][hx711:031]: 'HX711 Value': Got value 612891
+[18:29:19][D][sensor:125]: 'HX711 Value': Sending state 69.31303 L with 2 decimals of accuracy
+[18:29:20][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120813V
+[18:29:20][D][hx711:031]: 'HX711 Value': Got value 612893
+[18:29:21][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120687V
+[18:29:21][D][hx711:031]: 'HX711 Value': Got value 612917
+[18:29:22][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120500V
+[18:29:22][D][hx711:031]: 'HX711 Value': Got value 612944
+[18:29:23][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120937V
+[18:29:23][D][hx711:031]: 'HX711 Value': Got value 612900
+[18:29:24][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121063V
+[18:29:24][D][hx711:031]: 'HX711 Value': Got value 612919
+[18:29:25][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121063V
+[18:29:25][D][hx711:031]: 'HX711 Value': Got value 612883
+[18:29:26][D][ads1115:164]: 'PH Sensor': Got Voltage=1.120750V
+[18:29:26][D][hx711:031]: 'HX711 Value': Got value 612984
+[18:29:27][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121125V
+[18:29:27][D][hx711:031]: 'HX711 Value': Got value 612933
+[18:29:28][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121312V
+[18:29:28][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:29:28][D][hx711:031]: 'HX711 Value': Got value 612907
+[18:29:29][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121250V
+[18:29:29][D][hx711:031]: 'HX711 Value': Got value 612919
+[18:29:30][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121063V
+[18:29:30][D][sensor:125]: 'PH Sensor': Sending state 6.43533 Ph with 2 decimals of accuracy
+[18:29:30][D][hx711:031]: 'HX711 Value': Got value 612914
+[18:29:31][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121312V
+[18:29:31][D][hx711:031]: 'HX711 Value': Got value 612897
+[18:29:32][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121500V
+[18:29:32][D][hx711:031]: 'HX711 Value': Got value 612892
+[18:29:33][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121438V
+[18:29:33][D][hx711:031]: 'HX711 Value': Got value 612897
+[18:29:34][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121438V
+[18:29:34][D][hx711:031]: 'HX711 Value': Got value 612961
+[18:29:34][D][sensor:125]: 'HX711 Value': Sending state 69.31107 L with 2 decimals of accuracy
+[18:29:35][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121375V
+[18:29:35][D][hx711:031]: 'HX711 Value': Got value 612923
+[18:29:36][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121750V
+[18:29:36][D][hx711:031]: 'HX711 Value': Got value 612922
+[18:29:37][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121812V
+[18:29:37][D][hx711:031]: 'HX711 Value': Got value 612939
+[18:29:38][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121938V
+[18:29:38][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:29:38][D][hx711:031]: 'HX711 Value': Got value 612966
+[18:29:39][D][ads1115:164]: 'PH Sensor': Got Voltage=1.121438V
+[18:29:39][D][hx711:031]: 'HX711 Value': Got value 612927
+[18:29:40][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122250V
+[18:29:40][D][hx711:031]: 'HX711 Value': Got value 612932
+[18:29:41][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122125V
+[18:29:41][D][hx711:031]: 'HX711 Value': Got value 612928
+[18:29:42][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122125V
+[18:29:42][D][hx711:031]: 'HX711 Value': Got value 612953
+[18:29:43][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122125V
+[18:29:43][D][hx711:031]: 'HX711 Value': Got value 612937
+[18:29:44][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122250V
+[18:29:44][D][hx711:031]: 'HX711 Value': Got value 612909
+[18:29:45][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122313V
+[18:29:45][D][hx711:031]: 'HX711 Value': Got value 612957
+[18:29:46][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122625V
+[18:29:46][D][hx711:031]: 'HX711 Value': Got value 612927
+[18:29:47][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122750V
+[18:29:47][D][hx711:031]: 'HX711 Value': Got value 612906
+[18:29:48][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122500V
+[18:29:48][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:29:48][D][hx711:031]: 'HX711 Value': Got value 612933
+[18:29:49][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122437V
+[18:29:49][D][hx711:031]: 'HX711 Value': Got value 612904
+[18:29:49][D][sensor:125]: 'HX711 Value': Sending state 69.31290 L with 2 decimals of accuracy
+[18:29:50][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122500V
+[18:29:50][D][sensor:125]: 'PH Sensor': Sending state 6.44229 Ph with 2 decimals of accuracy
+[18:29:50][D][hx711:031]: 'HX711 Value': Got value 612958
+[18:29:51][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122687V
+[18:29:51][D][hx711:031]: 'HX711 Value': Got value 612921
+[18:29:52][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122563V
+[18:29:52][D][hx711:031]: 'HX711 Value': Got value 612947
+[18:29:53][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122813V
+[18:29:53][D][hx711:031]: 'HX711 Value': Got value 612934
+[18:29:54][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123062V
+[18:29:54][D][hx711:031]: 'HX711 Value': Got value 612922
+[18:29:55][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123312V
+[18:29:55][D][hx711:031]: 'HX711 Value': Got value 612949
+[18:29:56][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123188V
+[18:29:56][D][hx711:031]: 'HX711 Value': Got value 612954
+[18:29:57][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122875V
+[18:29:57][D][hx711:031]: 'HX711 Value': Got value 612972
+[18:29:58][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123562V
+[18:29:58][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:29:58][D][hx711:031]: 'HX711 Value': Got value 612968
+[18:29:59][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123250V
+[18:29:59][D][hx711:031]: 'HX711 Value': Got value 612939
+[18:30:00][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123062V
+[18:30:00][D][hx711:031]: 'HX711 Value': Got value 612981
+[18:30:01][D][ads1115:164]: 'PH Sensor': Got Voltage=1.122875V
+[18:30:01][D][hx711:031]: 'HX711 Value': Got value 612965
+[18:30:02][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123625V
+[18:30:02][D][hx711:031]: 'HX711 Value': Got value 612935
+[18:30:03][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123875V
+[18:30:03][D][hx711:031]: 'HX711 Value': Got value 612938
+[18:30:04][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123875V
+[18:30:04][D][hx711:031]: 'HX711 Value': Got value 612911
+[18:30:04][D][sensor:125]: 'HX711 Value': Sending state 69.31451 L with 2 decimals of accuracy
+[18:30:05][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123438V
+[18:30:05][D][hx711:031]: 'HX711 Value': Got value 612941
+[18:30:06][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123813V
+[18:30:06][D][hx711:031]: 'HX711 Value': Got value 612955
+[18:30:07][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124063V
+[18:30:07][D][hx711:031]: 'HX711 Value': Got value 612945
+[18:30:08][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124063V
+[18:30:08][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:30:08][D][hx711:031]: 'HX711 Value': Got value 612912
+[18:30:09][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123625V
+[18:30:09][D][hx711:031]: 'HX711 Value': Got value 612931
+[18:30:10][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123500V
+[18:30:10][D][sensor:125]: 'PH Sensor': Sending state 6.45002 Ph with 2 decimals of accuracy
+[18:30:10][D][hx711:031]: 'HX711 Value': Got value 612947
+[18:30:11][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124250V
+[18:30:11][D][hx711:031]: 'HX711 Value': Got value 612914
+[18:30:12][D][ads1115:164]: 'PH Sensor': Got Voltage=1.123875V
+[18:30:12][D][hx711:031]: 'HX711 Value': Got value 612945
+[18:30:13][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124375V
+[18:30:13][D][hx711:031]: 'HX711 Value': Got value 612945
+[18:30:14][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124000V
+[18:30:14][D][hx711:031]: 'HX711 Value': Got value 612934
+[18:30:15][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124563V
+[18:30:15][D][hx711:031]: 'HX711 Value': Got value 612913
+[18:30:16][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124500V
+[18:30:16][D][hx711:031]: 'HX711 Value': Got value 612933
+[18:30:17][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124750V
+[18:30:17][D][hx711:031]: 'HX711 Value': Got value 612976
+[18:30:18][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124625V
+[18:30:18][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:30:18][D][hx711:031]: 'HX711 Value': Got value 612980
+[18:30:19][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124313V
+[18:30:19][D][hx711:031]: 'HX711 Value': Got value 612936
+[18:30:19][D][sensor:125]: 'HX711 Value': Sending state 69.31395 L with 2 decimals of accuracy
+[18:30:20][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124750V
+[18:30:20][D][hx711:031]: 'HX711 Value': Got value 612927
+[18:30:21][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124500V
+[18:30:21][D][hx711:031]: 'HX711 Value': Got value 612977
+[18:30:22][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124750V
+[18:30:22][D][hx711:031]: 'HX711 Value': Got value 612917
+[18:30:23][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124563V
+[18:30:23][D][hx711:031]: 'HX711 Value': Got value 612996
+[18:30:24][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124938V
+[18:30:24][D][hx711:031]: 'HX711 Value': Got value 612916
+[18:30:25][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125125V
+[18:30:25][D][hx711:031]: 'HX711 Value': Got value 612972
+[18:30:26][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124563V
+[18:30:26][D][hx711:031]: 'HX711 Value': Got value 612888
+[18:30:27][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124875V
+[18:30:27][D][hx711:031]: 'HX711 Value': Got value 612935
+[18:30:28][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125188V
+[18:30:28][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:30:28][D][hx711:031]: 'HX711 Value': Got value 612957
+[18:30:29][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124875V
+[18:30:29][D][hx711:031]: 'HX711 Value': Got value 612955
+[18:30:30][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125312V
+[18:30:30][D][sensor:125]: 'PH Sensor': Sending state 6.45771 Ph with 2 decimals of accuracy
+[18:30:30][D][hx711:031]: 'HX711 Value': Got value 612985
+[18:30:31][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125125V
+[18:30:31][D][hx711:031]: 'HX711 Value': Got value 612947
+[18:30:32][D][ads1115:164]: 'PH Sensor': Got Voltage=1.124938V
+[18:30:32][D][hx711:031]: 'HX711 Value': Got value 612969
+[18:30:33][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125250V
+[18:30:33][D][hx711:031]: 'HX711 Value': Got value 612941
+[18:30:34][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125250V
+[18:30:34][D][hx711:031]: 'HX711 Value': Got value 612978
+[18:30:34][D][sensor:125]: 'HX711 Value': Sending state 69.31535 L with 2 decimals of accuracy
+[18:30:35][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125125V
+[18:30:35][D][hx711:031]: 'HX711 Value': Got value 612954
+[18:30:36][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125062V
+[18:30:36][D][hx711:031]: 'HX711 Value': Got value 612960
+[18:30:37][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125375V
+[18:30:37][D][hx711:031]: 'HX711 Value': Got value 612908
+[18:30:38][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125375V
+[18:30:38][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:30:38][D][hx711:031]: 'HX711 Value': Got value 612987
+[18:30:39][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125437V
+[18:30:39][D][hx711:031]: 'HX711 Value': Got value 612945
+[18:30:40][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125563V
+[18:30:40][D][hx711:031]: 'HX711 Value': Got value 612981
+[18:30:41][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125813V
+[18:30:41][D][hx711:031]: 'HX711 Value': Got value 612974
+[18:30:42][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125687V
+[18:30:42][D][hx711:031]: 'HX711 Value': Got value 612930
+[18:30:43][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125750V
+[18:30:43][D][hx711:031]: 'HX711 Value': Got value 612954
+[18:30:44][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125750V
+[18:30:44][D][hx711:031]: 'HX711 Value': Got value 612936
+[18:30:45][D][ads1115:164]: 'PH Sensor': Got Voltage=1.125625V
+[18:30:45][D][hx711:031]: 'HX711 Value': Got value 612955
+[18:30:46][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126000V
+[18:30:46][D][hx711:031]: 'HX711 Value': Got value 612956
+[18:30:47][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126063V
+[18:30:47][D][hx711:031]: 'HX711 Value': Got value 612966
+[18:30:48][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126000V
+[18:30:48][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:30:48][D][hx711:031]: 'HX711 Value': Got value 612932
+[18:30:49][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126125V
+[18:30:49][D][hx711:031]: 'HX711 Value': Got value 612953
+[18:30:49][D][sensor:125]: 'HX711 Value': Sending state 69.31555 L with 2 decimals of accuracy
+[18:30:50][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126250V
+[18:30:50][D][sensor:125]: 'PH Sensor': Sending state 6.46411 Ph with 2 decimals of accuracy
+[18:30:50][D][hx711:031]: 'HX711 Value': Got value 612976
+[18:30:51][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126250V
+[18:30:51][D][hx711:031]: 'HX711 Value': Got value 612939
+[18:30:52][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126187V
+[18:30:52][D][hx711:031]: 'HX711 Value': Got value 612932
+[18:30:53][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126375V
+[18:30:53][D][hx711:031]: 'HX711 Value': Got value 612976
+[18:30:54][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126375V
+[18:30:54][D][hx711:031]: 'HX711 Value': Got value 612955
+[18:30:55][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126750V
+[18:30:55][D][hx711:031]: 'HX711 Value': Got value 612925
+[18:30:56][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126625V
+[18:30:56][D][hx711:031]: 'HX711 Value': Got value 612936
+[18:30:57][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126438V
+[18:30:57][D][hx711:031]: 'HX711 Value': Got value 612946
+[18:30:58][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126250V
+[18:30:58][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:30:58][D][sensor:125]: 'TDS Sensor': Sending state 828.37970 TDS with 2 decimals of accuracy
+[18:30:58][D][hx711:031]: 'HX711 Value': Got value 612954
+[18:30:59][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126938V
+[18:30:59][D][hx711:031]: 'HX711 Value': Got value 612929
+[18:31:00][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126875V
+[18:31:00][D][hx711:031]: 'HX711 Value': Got value 612956
+[18:31:01][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126875V
+[18:31:01][D][hx711:031]: 'HX711 Value': Got value 612939
+[18:31:02][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126562V
+[18:31:02][D][hx711:031]: 'HX711 Value': Got value 612954
+[18:31:03][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126875V
+[18:31:03][D][hx711:031]: 'HX711 Value': Got value 612965
+[18:31:04][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127313V
+[18:31:04][D][hx711:031]: 'HX711 Value': Got value 612952
+[18:31:04][D][sensor:125]: 'HX711 Value': Sending state 69.31443 L with 2 decimals of accuracy
+[18:31:05][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127375V
+[18:31:05][D][hx711:031]: 'HX711 Value': Got value 612966
+[18:31:06][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127187V
+[18:31:06][D][hx711:031]: 'HX711 Value': Got value 612951
+[18:31:07][D][ads1115:164]: 'PH Sensor': Got Voltage=1.126875V
+[18:31:07][D][hx711:031]: 'HX711 Value': Got value 612982
+[18:31:08][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127437V
+[18:31:08][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:31:08][D][hx711:031]: 'HX711 Value': Got value 612965
+[18:31:09][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127437V
+[18:31:09][D][hx711:031]: 'HX711 Value': Got value 612942
+[18:31:10][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127625V
+[18:31:10][D][sensor:125]: 'PH Sensor': Sending state 6.47040 Ph with 2 decimals of accuracy
+[18:31:10][D][hx711:031]: 'HX711 Value': Got value 613001
+[18:31:11][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127187V
+[18:31:11][D][hx711:031]: 'HX711 Value': Got value 612970
+[18:31:12][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127500V
+[18:31:12][D][hx711:031]: 'HX711 Value': Got value 612959
+[18:31:13][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127625V
+[18:31:13][D][hx711:031]: 'HX711 Value': Got value 612967
+[18:31:14][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127687V
+[18:31:14][D][hx711:031]: 'HX711 Value': Got value 612952
+[18:31:15][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127625V
+[18:31:15][D][hx711:031]: 'HX711 Value': Got value 612969
+[18:31:16][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127500V
+[18:31:16][D][hx711:031]: 'HX711 Value': Got value 612971
+[18:31:17][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128000V
+[18:31:17][D][hx711:031]: 'HX711 Value': Got value 613002
+[18:31:18][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127938V
+[18:31:18][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:31:18][D][hx711:031]: 'HX711 Value': Got value 612964
+[18:31:19][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128000V
+[18:31:19][D][hx711:031]: 'HX711 Value': Got value 612976
+[18:31:19][D][sensor:125]: 'HX711 Value': Sending state 69.31676 L with 2 decimals of accuracy
+[18:31:20][D][ads1115:164]: 'PH Sensor': Got Voltage=1.127750V
+[18:31:20][D][hx711:031]: 'HX711 Value': Got value 612961
+[18:31:21][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128250V
+[18:31:21][D][hx711:031]: 'HX711 Value': Got value 612937
+[18:31:22][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128188V
+[18:31:22][D][hx711:031]: 'HX711 Value': Got value 612969
+[18:31:23][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128250V
+[18:31:23][D][hx711:031]: 'HX711 Value': Got value 612973
+[18:31:24][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128125V
+[18:31:24][D][hx711:031]: 'HX711 Value': Got value 612956
+[18:31:25][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128250V
+[18:31:25][D][hx711:031]: 'HX711 Value': Got value 612975
+[18:31:26][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128500V
+[18:31:26][D][hx711:031]: 'HX711 Value': Got value 612973
+[18:31:27][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128625V
+[18:31:27][D][hx711:031]: 'HX711 Value': Got value 612989
+[18:31:28][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128375V
+[18:31:28][D][ads1115:164]: 'TDS Sensor': Got Voltage=2.047937V
+[18:31:28][D][hx711:031]: 'HX711 Value': Got value 612978
+[18:31:29][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128375V
+[18:31:29][D][hx711:031]: 'HX711 Value': Got value 612953
+[18:31:30][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128875V
+[18:31:30][D][sensor:125]: 'PH Sensor': Sending state 6.47748 Ph with 2 decimals of accuracy
+[18:31:30][D][hx711:031]: 'HX711 Value': Got value 612911
+[18:31:31][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128875V
+[18:31:31][D][hx711:031]: 'HX711 Value': Got value 612963
+[18:31:32][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128438V
+[18:31:32][D][hx711:031]: 'HX711 Value': Got value 612982
+[18:31:33][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128625V
+[18:31:33][D][hx711:031]: 'HX711 Value': Got value 612948
+[18:31:34][D][ads1115:164]: 'PH Sensor': Got Voltage=1.129187V
+[18:31:34][D][hx711:031]: 'HX711 Value': Got value 613014
+[18:31:34][D][sensor:125]: 'HX711 Value': Sending state 69.31673 L with 2 decimals of accuracy
+[18:31:35][D][ads1115:164]: 'PH Sensor': Got Voltage=1.129250V
+[18:31:35][D][hx711:031]: 'HX711 Value': Got value 612976
+[18:31:36][D][ads1115:164]: 'PH Sensor': Got Voltage=1.129063V
+[18:31:36][D][hx711:031]: 'HX711 Value': Got value 612972
+[18:31:37][D][ads1115:164]: 'PH Sensor': Got Voltage=1.129063V
+[18:31:37][D][hx711:031]: 'HX711 Value': Got value 612936
+[18:31:38][D][ads1115:164]: 'PH Sensor': Got Voltage=1.128875V
