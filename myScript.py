@@ -2,8 +2,8 @@ import datetime
 from datetime import datetime as dt
 from datetime import timedelta
 
-script_version = "1.0.5"
-last_mod_date = "17/05/2022"
+script_version = "1.0.6"
+last_mod_date = "10/06/2022"
 pay_day = 15
 ipo_day = 10
 ipo_val = 1000
@@ -25,16 +25,17 @@ def getDelta(dtToday):
 	next_pay_day = datetime.date(year, mounth, pay_day)
 	return (next_pay_day - dtToday.date()).days
 
-print("Script version is", script_version)
+print(F"Script version is {script_version}")
 today = dt.today()  # get date today
+date = today.strftime("%d/%m/%Y")
+print(F"Today is {date}")
 
-print("Today is", today.strftime("%d/%m/%Y"))
 delta = getDelta(today)
-print("Days before next pay:", delta)
+print(F"Days before next pay: {delta}")
 print("Enter ammount:")
 ammount = int(input())
 leftOver = (ammount - expec_val) - ipo_val
 if (today.day > ipo_day) and (today.day < pay_day):
    leftOver = leftOver + ipo_val	
-print("Left ofer:", leftOver)
+print(F"Left over: {leftOver}")
 print (leftOver/delta)
