@@ -59,12 +59,12 @@ def future_spend(expens_array, pay_day, today):
             if cur_day >= today and cur_day < pay_day:
                 future_spends += cur_amm
 
-        if today == pay_day:  # salary day, expected expens is only today
+        """if today == pay_day:  # salary day, expected expens is only today
             if cur_day == today:
-                future_spends += cur_amm
+                future_spends += cur_amm """
 
-        if today > pay_day:  # last falf of mounth, expected expens is from today till pay_day in next mounth
-            if cur_day >= pay_day and cur_day > today:
+        if today >= pay_day:  # last falf of mounth, expected expens is from today till pay_day in next mounth
+            if cur_day < pay_day or cur_day > today:
                 future_spends += cur_amm
 
     return future_spends
