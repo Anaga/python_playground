@@ -7,7 +7,7 @@ last_mod_date = "10/06/2022"
 pay_day = 15
 ipo_day = 10
 ipo_val = 1000
-expec_val = 500
+expec_val = 1000
 
 def getDelta(dtToday):
 	year 	= dtToday.year
