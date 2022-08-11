@@ -2,11 +2,11 @@
 import datetime
 from datetime import datetime as dt
 
-script_version = "1.0.6"
-last_mod_date = "15/06/2022"
+script_version = "1.0.7"
+last_mod_date = "11/08/2022"
 
 pay_day = 15
-expec_val = 1000
+expec_val = 1500
 
 # 6271516 SEB laenukaitse kindlustuse maksekorraldus -45,89
 ipo_insurense = {"day": 10, "ammount": 45.89}
@@ -72,10 +72,10 @@ print("Enter ammount:")
 ammount = int(input())
 
 will_spend = future_spend(expens_array, pay_day, today.day)
-print(F"will spend: {will_spend}")
+print(F"Will spend: {will_spend:.2f}")
 leftOver = ammount - will_spend - expec_val
 
 delta = getDelta(today, pay_day)
 print(F"Days before next pay: {delta}")
-print(F"Left over: {leftOver}")
-print(leftOver/delta)
+print(F"Left over: {leftOver:.2f}")
+print(F"You can spend {(leftOver/delta):.2f} per day")
