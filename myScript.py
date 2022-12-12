@@ -2,28 +2,32 @@
 import datetime
 from datetime import datetime as dt
 
-script_version = "1.0.7"
-last_mod_date = "11/08/2022"
+script_version = "1.0.9"
+last_mod_date = "12/12/2022"
 
 pay_day = 15
 expec_val = 1500
 
 # 6271516 SEB laenukaitse kindlustuse maksekorraldus -45,89
-ipo_insurense = {"day": 10, "ammount": 45.89}
+# ipo_insurense = {"day": 10, "ammount": 45.89}
 
 # Lep. 2019009655/intress/L190006408 -220,43
-ipo_intress = {"day": 10, "ammount": 220.43}
+# EURIBOR 2.316% 
+# Now percent is 4.216%
+# old percent ipo_intress = {"day": 10, "ammount": 220.43}
+ipo_intress = {"day": 10, "ammount": 497.80}
 
 # Lep. 2019009655/põhiosa/L190006408 -312,03
-ipo_pohiosa = {"day": 10, "ammount": 312.03}
+# old ipo_pohiosa = {"day": 10, "ammount": 312.03}
+ipo_pohiosa = {"day": 10, "ammount": 200.07}
 
 # 102895391 Arve nr A22214516 tasumine -455,26
-lising = {"day": 10, "ammount": 455.26}
+lising = {"day": 10, "ammount": 462.49}
 
 life_insurence = {"day": 26, "ammount": 50}   #
 
-expens_array = [ipo_insurense, ipo_intress,
-                ipo_pohiosa, lising, life_insurence]
+#expens_array = [ipo_insurense, ipo_intress, ipo_pohiosa, lising, life_insurence]
+expens_array = [ipo_intress, ipo_pohiosa, lising, life_insurence]
 
 def getDelta(dtToday, pay_day):
     "function to calculte days count between today and pay day"
