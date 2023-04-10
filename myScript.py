@@ -2,8 +2,8 @@
 import datetime
 from datetime import datetime as dt
 
-script_version = "1.0.11"
-last_mod_date = "10/03/2023"
+script_version = "1.0.12"
+last_mod_date = "10/04/2023"
 
 pay_day = 15
 expec_val = 1500
@@ -15,11 +15,11 @@ ipo_insurense = {"day": 10, "ammount": 48.70}
 # EURIBOR 2.316% 
 # Now percent is 4.216%
 # old percent ipo_intress = {"day": 10, "ammount": 220.43}
-ipo_intress = {"day": 10, "ammount": 433.39}
+ipo_intress = {"day": 10, "ammount": 478.87}
 
 # Lep. 2019009655/põhiosa/L190006408 -312,03
 # old ipo_pohiosa = {"day": 10, "ammount": 312.03}
-ipo_pohiosa = {"day": 10, "ammount": 264.48}
+ipo_pohiosa = {"day": 10, "ammount": 219.00}
 
 # 102895391 Arve nr A22214516 tasumine -455,26
 lising = {"day": 10, "ammount": 481.73}
