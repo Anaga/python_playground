@@ -2,31 +2,40 @@
 import datetime
 from datetime import datetime as dt
 
-script_version = "1.0.12"
-last_mod_date = "10/04/2023"
+script_version = "1.0.13"
+last_mod_date = "22/05/2023"
 
 pay_day = 15
-expec_val = 1500
+expec_val = 2000
 
 # 6271516 SEB laenukaitse kindlustuse maksekorraldus -45,89
-ipo_insurense = {"day": 10, "ammount": 48.70}
+# last change 10.05.2023: -46.91
+ipo_insurense = {"day": 10, "ammount": 46.91}
 
 # Lep. 2019009655/intress/L190006408 -220,43
 # EURIBOR 2.316% 
 # Now percent is 4.216%
 # old percent ipo_intress = {"day": 10, "ammount": 220.43}
-ipo_intress = {"day": 10, "ammount": 478.87}
+# last change: 10.05.2023: -462.65
+ipo_intress = {"day": 10, "ammount": 462.65}
 
 # Lep. 2019009655/põhiosa/L190006408 -312,03
 # old ipo_pohiosa = {"day": 10, "ammount": 312.03}
-ipo_pohiosa = {"day": 10, "ammount": 219.00}
+# last change 10.05.2023:  -235.22
+ipo_pohiosa = {"day": 10, "ammount": 235.22}
 
+# seb liising
 # 102895391 Arve nr A22214516 tasumine -455,26
+# last change 10.03.2023: -481.73
 lising = {"day": 10, "ammount": 481.73}
+
+# car insurense
+# as LHV kindlustus
+car_insurense = {"day": 16, "ammount": 43.46}
 
 life_insurence = {"day": 18, "ammount": 200}   #
 
-expens_array = [ipo_insurense, ipo_intress, ipo_pohiosa, lising, life_insurence]
+expens_array = [ipo_insurense, ipo_intress, ipo_pohiosa, lising, life_insurence, car_insurense]
 #expens_array = [ipo_intress, ipo_pohiosa, lising, life_insurence]
 
 def getDelta(dtToday, pay_day):
