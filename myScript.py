@@ -2,10 +2,11 @@
 import datetime
 from datetime import datetime as dt
 
-script_version = "1.0.13"
-last_mod_date = "22/05/2023"
+script_version = "1.0.14"
+last_mod_date = "10/07/2023"
 
-pay_day = 15
+# Switch to new job - pay day is 5
+pay_day = 5
 expec_val = 2000
 
 # 6271516 SEB laenukaitse kindlustuse maksekorraldus -45,89
@@ -16,13 +17,17 @@ ipo_insurense = {"day": 10, "ammount": 46.91}
 # EURIBOR 2.316% 
 # Now percent is 4.216%
 # old percent ipo_intress = {"day": 10, "ammount": 220.43}
-# last change: 10.05.2023: -462.65
-ipo_intress = {"day": 10, "ammount": 462.65}
+# last change 10.05.2023: -462.65
+# 10.07.2023 - EURIBOR 3.605% 
+#       Now percent is 5.505%
+# last change 10.07.2023: -562.24
+ipo_intress = {"day": 10, "ammount": 562.24}
 
 # Lep. 2019009655/põhiosa/L190006408 -312,03
 # old ipo_pohiosa = {"day": 10, "ammount": 312.03}
-# last change 10.05.2023:  -235.22
-ipo_pohiosa = {"day": 10, "ammount": 235.22}
+# last change 10.05.2023: -235.22
+# last change 10.07.2023: -236.54
+ipo_pohiosa = {"day": 10, "ammount": 236.54}
 
 # seb liising
 # 102895391 Arve nr A22214516 tasumine -455,26
