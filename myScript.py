@@ -6,12 +6,21 @@ script_version = "1.0.14"
 last_mod_date = "10/07/2023"
 
 # Switch to new job - pay day is 5
-pay_day = 5
+pay_day = 4
 expec_val = 2000
 
 # 6271516 SEB laenukaitse kindlustuse maksekorraldus -45,89
 # last change 10.05.2023: -46.91
-ipo_insurense = {"day": 10, "ammount": 46.91}
+# last change 10.08.2023: -49.09
+# last change 11.09.2023: -50,62
+ipo_insurense = {"day": 11, "ammount": 50.62}
+
+
+# seb liising
+# 102895391 Arve nr A22214516 tasumine -455,26
+# last change 10.03.2023: -481.73
+# last change 11.09.2023: -488.03
+lising = {"day": 11, "ammount": 488.03}
 
 # Lep. 2019009655/intress/L190006408 -220,43
 # EURIBOR 2.316% 
@@ -21,18 +30,20 @@ ipo_insurense = {"day": 10, "ammount": 46.91}
 # 10.07.2023 - EURIBOR 3.605% 
 #       Now percent is 5.505%
 # last change 10.07.2023: -562.24
-ipo_intress = {"day": 10, "ammount": 562.24}
+# 10.08.2023 - EURIBOR 3.9640% 
+#       Now percent is 5.505%
+# last change 10.08.2023: -621.36
+# last change 11.09.2023: -640.54
+ipo_intress = {"day": 11, "ammount": 640.54}
 
 # Lep. 2019009655/põhiosa/L190006408 -312,03
 # old ipo_pohiosa = {"day": 10, "ammount": 312.03}
 # last change 10.05.2023: -235.22
 # last change 10.07.2023: -236.54
-ipo_pohiosa = {"day": 10, "ammount": 236.54}
+# last change 10.08.2023: -177.42
+# last change 11.09.2023: -158.24
+ipo_pohiosa = {"day": 11, "ammount": 158.24}
 
-# seb liising
-# 102895391 Arve nr A22214516 tasumine -455,26
-# last change 10.03.2023: -481.73
-lising = {"day": 10, "ammount": 481.73}
 
 # car insurense
 # as LHV kindlustus
@@ -40,7 +51,8 @@ car_insurense = {"day": 16, "ammount": 43.46}
 
 life_insurence = {"day": 18, "ammount": 200}   #
 
-expens_array = [ipo_insurense, ipo_intress, ipo_pohiosa, lising, life_insurence, car_insurense]
+#expens_array = [ipo_insurense, ipo_intress, ipo_pohiosa, lising, life_insurence, car_insurense]
+expens_array = [ipo_insurense, ipo_intress, ipo_pohiosa, lising, car_insurense]
 #expens_array = [ipo_intress, ipo_pohiosa, lising, life_insurence]
 
 def getDelta(dtToday, pay_day):
