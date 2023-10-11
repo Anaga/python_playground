@@ -2,18 +2,19 @@
 import datetime
 from datetime import datetime as dt
 
-script_version = "1.0.14"
-last_mod_date = "10/07/2023"
+script_version = "1.0.15"
+last_mod_date = "11/10/2023"
 
 # Switch to new job - pay day is 5
 pay_day = 4
-expec_val = 2000
+expec_val = 3000
 
 # 6271516 SEB laenukaitse kindlustuse maksekorraldus -45,89
 # last change 10.05.2023: -46.91
 # last change 10.08.2023: -49.09
 # last change 11.09.2023: -50,62
-ipo_insurense = {"day": 11, "ammount": 50.62}
+# last change 11.09.2023: -45,83
+ipo_insurense = {"day": 11, "ammount": 45.83}
 
 
 # seb liising
@@ -34,7 +35,8 @@ lising = {"day": 11, "ammount": 488.03}
 #       Now percent is 5.505%
 # last change 10.08.2023: -621.36
 # last change 11.09.2023: -640.54
-ipo_intress = {"day": 11, "ammount": 640.54}
+# last change 11.10.2023: -579,79
+ipo_intress = {"day": 11, "ammount": 579.79}
 
 # Lep. 2019009655/põhiosa/L190006408 -312,03
 # old ipo_pohiosa = {"day": 10, "ammount": 312.03}
@@ -42,7 +44,8 @@ ipo_intress = {"day": 11, "ammount": 640.54}
 # last change 10.07.2023: -236.54
 # last change 10.08.2023: -177.42
 # last change 11.09.2023: -158.24
-ipo_pohiosa = {"day": 11, "ammount": 158.24}
+# last change 11.10.2023: -218,99
+ipo_pohiosa = {"day": 11, "ammount": 218.99}
 
 
 # car insurense
@@ -95,13 +98,14 @@ def future_spend(expens_array, pay_day, today):
 
 print(F"Script version is {script_version}")
 today = dt.today()  # get date today
+
 date = today.strftime("%d/%m/%Y")
 print(F"Today is {date}")
 
 print("Enter ammount:")
 ammount = int(input())
 
-will_spend = future_spend(expens_array, pay_day, today.day)
+will_spend = future_spend(expens_array, pay_day, (today.day))
 print(F"Will spend: {will_spend:.2f}")
 leftOver = ammount - will_spend - expec_val
 
