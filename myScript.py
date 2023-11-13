@@ -14,14 +14,15 @@ expec_val = 3000
 # last change 10.08.2023: -49.09
 # last change 11.09.2023: -50,62
 # last change 11.09.2023: -45,83
-ipo_insurense = {"day": 11, "ammount": 45.83}
+# last change 10.11.2023: -48,92
+ipo_insurense = {"day": 10, "ammount": 48.92}
 
 
 # seb liising
 # 102895391 Arve nr A22214516 tasumine -455,26
 # last change 10.03.2023: -481.73
 # last change 11.09.2023: -488.03
-lising = {"day": 11, "ammount": 488.03}
+lising = {"day": 10, "ammount": 488.03}
 
 # Lep. 2019009655/intress/L190006408 -220,43
 # EURIBOR 2.316% 
@@ -36,7 +37,8 @@ lising = {"day": 11, "ammount": 488.03}
 # last change 10.08.2023: -621.36
 # last change 11.09.2023: -640.54
 # last change 11.10.2023: -579,79
-ipo_intress = {"day": 11, "ammount": 579.79}
+# last change 10.11.2023: -618.73
+ipo_intress = {"day": 10, "ammount": 618.73}
 
 # Lep. 2019009655/põhiosa/L190006408 -312,03
 # old ipo_pohiosa = {"day": 10, "ammount": 312.03}
@@ -45,7 +47,8 @@ ipo_intress = {"day": 11, "ammount": 579.79}
 # last change 10.08.2023: -177.42
 # last change 11.09.2023: -158.24
 # last change 11.10.2023: -218,99
-ipo_pohiosa = {"day": 11, "ammount": 218.99}
+# last change 10.11.2023: -180,05
+ipo_pohiosa = {"day": 10, "ammount": 180.05}
 
 
 # car insurense
