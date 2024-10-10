@@ -2,8 +2,8 @@
 import datetime
 from datetime import datetime as dt
 
-script_version = "1.0.17"
-last_mod_date = "12/03/2024"
+script_version = "1.0.19"
+last_mod_date = "10/10/2024"
 
 # Switch to new job - pay day is 5
 pay_day = 6
@@ -24,7 +24,8 @@ ipo_insurense = {"day": 11, "ammount": 46.50}
 # last change 10.03.2023: -481.73
 # last change 11.09.2023: -488.03
 # last change 11.03.2024: -487,79
-lising = {"day": 11, "ammount": 487.79}
+# last change 10.10.2024: -485,47
+lising = {"day": 10, "ammount": 485.47}
 
 
 # Lep. 2019009655/intress/L190006408 -220,43
@@ -45,7 +46,11 @@ lising = {"day": 11, "ammount": 487.79}
 # 11.03.2024 - EURIBOR 4.066%  + 1.90
 #       Now percent is 5.966%
 # last change 11.03.2024: -602,60
-ipo_intress = {"day": 11, "ammount": 602.60}
+
+# 10.10.2024 - EURIBOR 3.795%  + 1.90
+#       Now percent is 5.695%
+# last change 10.10.2024: -609.83
+ipo_intress = {"day": 10, "ammount": 609.83}
 
 # Lep. 2019009655/põhiosa/L190006408 -312,03
 # old ipo_pohiosa = {"day": 10, "ammount": 312.03}
@@ -59,7 +64,9 @@ ipo_intress = {"day": 11, "ammount": 602.60}
 # 11.03.2024 - EURIBOR 4.066%  + 1.90
 #       Now percent is 5.966%
 # last change 11.03.2024: -233.3
-ipo_pohiosa = {"day": 11, "ammount": 233.30}
+# last change 10.04.2024: -191.42
+# last change 10.10.2024: -204.32
+ipo_pohiosa = {"day": 10, "ammount": 204.32}
 
 
 # car insurense
